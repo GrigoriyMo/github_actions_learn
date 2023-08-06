@@ -22,8 +22,8 @@ jobs:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
-        host: ${{env.HOST}}
-        username: ${env.{USER_NAME}}
+        host: ${{vars.HOST}}
+        username: ${vars.USER_NAME}}
         key: ${{env.secrets.TEST_SECRET}}
         port: 22
         script: |
