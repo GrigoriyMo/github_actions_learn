@@ -20,9 +20,9 @@ jobs:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
-        host: $HOST 
-        username: $USERNAME
-        key: $FIRST_ACTION
+        host: ${{test_env.HOST}}
+        username: ${{test_env.USER_NAME}}
+        key: ${{test_env.secrets.TEST_SECRET}}
         port: 22
         script: |
           cd /product/github_actions_learn
