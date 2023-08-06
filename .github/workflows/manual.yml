@@ -22,7 +22,7 @@ jobs:
       with:
         host: $HOST 
         username: $USERNAME
-        key: $PRIVATE_KEY
+        key: $FIRST_ACTION
         port: 22
         script: |
           cd /product/github_actions_learn
