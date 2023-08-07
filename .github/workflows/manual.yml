@@ -24,7 +24,7 @@ jobs:
       with:
         host: ${{vars.HOST}}
         username: ${vars.USER_NAME}}
-        key: ${{secrets.TEST_SECRET}}
+        key: ${{secrets.FIRST_ACTION}}
         port: 22
         script: |
           cd /product/github_actions_learn
