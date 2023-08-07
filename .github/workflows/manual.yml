@@ -14,17 +14,14 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: 
-      name: test_env
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Deploy using ssh
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{vars.HOST}}
-        username: ${vars.USER_NAME}}
-        key: ${{secrets.FIRST_ACTION}}
+        host: ${{secrets.HOST}}
+        username: ${secrets.USER_NAME}}
+        key: ${{secrets.MY_TOKEN}}
         port: 22
         script: |
           cd /product/github_actions_learn
