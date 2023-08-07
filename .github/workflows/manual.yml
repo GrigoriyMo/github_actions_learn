@@ -25,7 +25,7 @@ jobs:
         port: 22
         script: |
           cd /product/github_actions_learn
-          git pull origin master
+          git pull origin main
           git status
           npm install --only=prod
           pm2 restart node1
